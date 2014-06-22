@@ -127,23 +127,38 @@ body { padding: 152px 0 0 0; font-family: $exo; }
   display: inline-block;
   width: 16px;
   height: 10px;
+  position: relative;
+  left: -8px;
+
 }
 
 .icon-comment {
   background-position: 0 -10px;
   height: 11px;
+  position: relative;
+  top: 1px;
 }
 
 .icon-eye {
   background-position: 0 0;
+  top: 1px;
+    & em {top:-4px;left:19px;}
 }
 
 .icon-rate {
   background-position: 0 -22px;
 }
 
-.iconrate { margin: 15px 0; }
-.iconrate span {margin-right: 40px;}
+.iconrate {
+    margin: 15px 0; color: $nav;
+    & em {
+        position: absolute;
+        top:-3px; left: 17px;
+        font-style: normal;
+        font-size: 12px;
+    }
+}
+.iconrate span {margin-right: 35px;}
 .iconrate span:last-child {margin-right: 0;}
 
 @media (min-width: 0) {
