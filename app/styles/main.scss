@@ -7,16 +7,24 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/font
 @import "../styles/offcanvas.css";
 @import url(http://fonts.googleapis.com/css?family=Exo+2:400,100,700&subset=latin,cyrillic);
 
-$black: #1e1d1d;
+
+$black: #282b2f;
+$btn-color: rgb( 53, 176, 103 );
+$white: #fff;
 $submenu-bg: #e5f0f0;
 $open-bg: #a5a5a5;
 $nav: #adb4b4;
 $menu-font: 16px;
 $exo: 'Exo 2', sans-serif;
+$sans: 'PT Sans', sans-serif;
 $br: rgb( 238, 238, 238 );
 $red: #990000;
+$exo12: 12px;
 $exo14: 14px;
 $exo18: 18px;
+$exo15: 15px;
+$sans12: 12px;
+$sans14: 12px;
 
 
 .browsehappy {
@@ -39,7 +47,9 @@ body { padding: 152px 0 0 0; font-family: $exo; }
 }
 
 .logo {padding: 19px 0;display: inline; width: 184px;margin-left: -13px;}
-.navmenu  {background: $black;}
+.navmenu  {background: $black; padding-top: 23px; }
+.navmenu-default .navmenu-nav>li>a { color: $white; letter-spacing: 1px; }
+.navmenu-default .navmenu-nav>li>a:hover { color: $red; }
 .navbar.main {background: #fff;border: 0;min-height: 92px;margin: 0;}
 .navbar-default .navbar-toggle,
 .navbar-default .navbar-toggle:hover,
@@ -48,11 +58,35 @@ body { padding: 152px 0 0 0; font-family: $exo; }
 .navmenu-default .navmenu-nav>.active>a:hover{
     background: none;
     color: $red;
+	font-weight: 700;
 }
 
 .navbar.submenu {
     top: 88px;
     background: $submenu-bg;
+}
+
+.nav.navmenu-nav hr {
+	padding-bottom: 1px;
+	background-color: #131416;
+	border-bottom:1px solid #3e434a;
+	border-top: none;
+	margin: 6px auto;
+	width: 183px;
+}
+
+.reg { padding: 17px;
+	& .enter { background: $btn-color; color: #fff }
+	& .register { background: none; border: 2px solid #fff; color: #fff;  }
+}
+.reg button {
+	display: block;
+	border-radius: 50px;
+	border: none;
+	width: 126px;
+	height: 29px;
+	margin-bottom: 15px;
+	font-size: $exo12;
 }
 
 .header-pic {border-radius: 4px;}
@@ -161,11 +195,34 @@ body { padding: 152px 0 0 0; font-family: $exo; }
 .iconrate span {margin-right: 35px;}
 .iconrate span:last-child {margin-right: 0;}
 
+.user-writer { padding: 14px 0; }
+.user-writer .media-heading { font-size: $exo14; }
+.user-writer .media { padding: 0 58px; }
+.user-writer .media .pull-left { margin: 0; }
+.user-writer  { font-size: 10px; font-family: $sans; }
+.descr { padding: 25px 0; line-height: 1.81; font-family: $sans; font-size: $sans14;
+	& p:first-child { padding-bottom: 20px; }
+}
+//.block-img {margin: 18px 0; }
+.descr-heading { padding: 30px 0; line-height: 1.81; font-family: $sans; font-size: $sans14;
+	& h5 { font-family: $exo; font-size: 18px; }
+	& .h-descr { font-size: $exo15; font-family: $exo; }
+}
+
 @media (min-width: 0) {
   .navbar-toggle {
     display: block; /* force showing the toggle */
   }
 }
+
+
+
+
+
+
+
+
+
 
 //@media (min-width: 992px) {
 //  body {
