@@ -107,6 +107,12 @@ body { padding: 152px 0 0 0; font-family: $exo; }
     -moz-box-shadow: 0 7px $open-bg, 0 14px $open-bg;
 }
 
+.rep {
+    position: absolute;
+    top: 18px;left:-2px;
+    display: none;
+}
+
 .glyphicon-search {
     font-size: 25px;
     top:33px;
