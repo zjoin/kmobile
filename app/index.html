@@ -10,7 +10,7 @@
 
         <script src="bower_components/modernizr/modernizr.js"></script>
     </head>
-    <body>
+    <body data-scroll-reveal>
 
 <!-- Push menu-->
     <div class="navmenu navmenu-default navmenu-fixed-left offcanvas">
@@ -36,8 +36,9 @@
     </div>
 <!--end push menu-->
 
+	<header>
     <div class="navbar navbar-default navbar-fixed-top text-center main">
-       <a href="/"><img class="logo" src="/images/logo.png" alt=""></a>
+       <a href="/"><img data-scroll-reveal="enter from the bottom after 1s" class="logo" src="/images/logo.png" alt=""></a>
       <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target=".navmenu" data-canvas="body">
        <span class="open-menu"></span>
         <div>
@@ -45,10 +46,27 @@
               </div>
       </button>
 
+<!--
       <div class="pull-right">
          <span class="glyphicon glyphicon-search"></span>
       </div>
+-->
+
+   <div class="masthead">
+  <form action="" class="masthead-search">
+    <label for="masthead-search-toggle" class="masthead-search-toggle">Toggle Search</label>
+    <input type="checkbox" id="masthead-search-toggle" class="isHidden"/>
+    <div class="masthead-search-indicator"></div>
+    <div class="masthead-search-search">
+      <label for="masthead-search-search" class="isHidden">Search</label>
+      <input type="search" id="masthead-search-search"/>
     </div>
+  </form>
+</div>
+
+    </div>
+
+
 
     <div class="navbar navbar-default navbar-fixed-top text-center submenu">
          <nav class="menu">
@@ -59,11 +77,11 @@
              </ul>
          </nav>
     </div>
-
+  </header>
     <div class="container">
          <div class="row">
           <div class="col-xs-12">
-              <section class="img article-user text-center">
+              <section  class="img article-user text-center">
 
 
               <ol class="breadcrumb">
@@ -72,7 +90,7 @@
               </ol>
 
                  <h1>Как сэкономить миллион рублей при покупке кроссовера?</h1>
-             <div><img class="img-responsive header-pic" src="/images/index1.png" alt="" style="display:inline;"></div>
+             <div><img class="img-responsive header-pic" src="/images/pic-1.jpg" alt=""></div>
 
               <div class="iconrate">
                   <span class="icon-eye"><em>1568</em></span>
@@ -130,23 +148,14 @@
             </section>
 
 
-            </div> <!-- end col-lg-12-->
-          </div> <!-- end row  -->
+            	<div class="img-margin">
+             		<img class="img-responsive header-pic block-img" src="/images/pic2.jpg" alt="">
+             	</div>
 
-          <div class="row">
-          	<div class="col-lg-12">
-          	<div class="row">
-          		<div class="col-xs-6">
-          			<div>
-             	<img class="img-responsive header-pic block-img" src="/images/pic2.jpg" alt="">
-             </div>
+          		<div class="img-margin">
+             		<img class="img-responsive header-pic block-img" src="/images/pic2.jpg" alt="">
           		</div>
-          		<div class="col-xs-6">
-          			<div>
-             	<img class="img-responsive header-pic block-img" src="/images/pic2.jpg" alt="">
-             </div>
-          		</div>
-          	</div>
+
           	<section class="descr">
               <p>
                Ни для кого не секрет, что мир стремится к упрощению и универсализации. Неудобно и затратно иметь массу вещей, каждая из которых выполняет одну отдельную функцию, даже если эта самая функция выполняется превосходно.
@@ -156,8 +165,13 @@
 В современном мире с его невообразимой скоростью жизни намного важнее, чтобы находящиеся в пользовании устройства делали всё, сразу и желательно без участия человека: стиральная машинка, самостоятельно собирающая грязное бельё по дому и вовремя заказывающая доставку стирального порошка; холодильник и мультиварка с выходом в Интернет, самостоятельно выкладывающие в Инстаграм снимки содержащейся еды; телефон с одной кнопкой, заменяющий одновременно плеер, фотоаппарат, книги, карту памяти, компьютер, а в отдельных тяжелых случаях и мозг…
               </p>
             </section>
-          	</div>
-          </div>
+
+
+
+
+
+          	</div> <!-- end col-lg-12 -->
+          </div> <!-- end row -->
 
     </div><!-- /.container -->
 
@@ -185,6 +199,15 @@
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
 
+<script src="//cdn.jsdelivr.net/headroomjs/0.5.0/headroom.min.js"></script>
+<script src="//cdn.jsdelivr.net/headroomjs/0.5.0/angular.headroom.min.js"></script>
+<script src="//cdn.jsdelivr.net/headroomjs/0.5.0/jQuery.headroom.min.js"></script>
 
+<script src="/scripts/scrollReveal.js"></script>
+  <script>
+
+      window.scrollReveal = new scrollReveal();
+
+  </script>
 </body>
 </html>
