@@ -324,23 +324,12 @@ $('.navbar-toggle').on('click',function(){
     $(this).find('.rep').toggle();
 });
 
-$('.container, .menu, .navbar-default, .col-xs-12').on('click',function(){
+$('.container').on('click',function(){
     if ($('body').hasClass('canvas-slid')) {
         $('.rep').hide();
  }
 });
 // end open arrow
-
-
-$('.masthead-search-toggle').on('click',function() {
-	 $('.masthead-search-indicator').toggleClass('bl-search');
-});
-
-$('.masthead-search-indicator').on('click',function() {
-	 $('.open-menu, .logo').hide();
-});
-
-
 
 
 
