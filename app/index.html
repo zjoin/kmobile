@@ -6,17 +6,22 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 		<link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="styles/main.css">
+      <link rel="stylesheet" href="styles/main.css">
+
+
 
         <script src="bower_components/modernizr/modernizr.js"></script>
+
+
     </head>
-    <body data-scroll-reveal>
+    <body>
+   <header>
 
 <!-- Push menu-->
     <div class="navmenu navmenu-default navmenu-fixed-left offcanvas">
       <ul class="nav navmenu-nav">
-        <li><a href="#">Главная</a></li>
-        <li class="active"><a href="#">Новости</a></li>
+        <li><a href="#">О проекте</a></li>
+        <li class="active"><a href="#">Вакансии</a></li>
         <li><a href="#">Статьи</a></li>
         <li><a href="#">Тест-драйвы</a></li>
         <li><a href="#">Гаджеты</a></li>
@@ -36,9 +41,9 @@
     </div>
 <!--end push menu-->
 
-	<header>
-    <div class="navbar navbar-default navbar-fixed-top text-center main">
-       <a href="/"><img data-scroll-reveal="enter from the top after 1s" class="logo" src="/images/logo.png" alt=""></a>
+
+    <div class="navbar navbar-default  text-center main">
+       <a href="/"><img  class="logo" src="/images/logo.png" alt=""></a>
       <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target=".navmenu" data-canvas="body">
        <span class="open-menu"></span>
         <div>
@@ -54,13 +59,16 @@
 
     </div>
 
-            <div id="sb-search" class="sb-search " >
-    <form>
-        <input class="sb-search-input " onkeyup="buttonUp();" placeholder="Enter your search term..." onblur="monkey();" type="search" value="" name="search" id="search">
-        <input class="sb-search-submit" type="submit"  value="">
-        <span class="sb-icon-search"><span class="glyphicon glyphicon-search"></span></span>
+<section class="tmp-fixed">
+    <div id="sb-search" class="sb-search " >
+    	<form>
+        	<input class="sb-search-input " onkeyup="buttonUp();" placeholder="Поиск..." onblur="monkey();" type="search" value="" 						name="search" id="search">
+        	<input class="sb-search-submit" type="submit"  value="">
+        <span class="sb-icon-search"><span class="glyphicon glyphicon-search">				</span>
+      </span>
     </form>
 </div>
+</section>
 
 
 
@@ -68,7 +76,7 @@
 
 
 
-
+<!--
     <div class="navbar navbar-default navbar-fixed-top text-center submenu">
          <nav class="menu">
              <ul>
@@ -78,6 +86,22 @@
              </ul>
          </nav>
     </div>
+-->
+
+
+   <section>
+	  <div class="selectholder">
+    <label>Новости</label>
+    <select name="projectstart" id="projectstart">
+      <option value="0">Новости</option>
+      <option value="Статьи">Статьи</option>
+      <option value="Тест-драйвы">Тест-драйвы</option>
+      <option value="Гаджеты">Гаджеты</option>
+    </select>
+  </div>
+</section>
+
+
   </header>
     <div class="container">
          <div class="row">
@@ -130,20 +154,7 @@
              	<img class="img-responsive header-pic block-img" src="/images/pic2.jpg" alt="">
              </div>
 
-<section>
-    <div id="owl-demo">
 
-  <div class="item"><img src="http://www.kolesa.ru/uploads/bnnews/2012/09/26/25282_1348669976_86097x778869-995x663.33333333333.jpg" alt="Owl Image"></div>
-  <div class="item"><img src="http://www.kolesa.ru/uploads/bnnews/2014/06/18/be6e61768da57106a134bebcf79c3352-995x0.jpg" alt="Owl Image"></div>
-  <div class="item"><img src="http://www.kolesa.ru/uploads/bnnews/2014/06/18/9e063c2b2be618ba0ce7b3b586d63063-995x0.jpg" alt="Owl Image"></div>
-  <div class="item"><img src="http://www.kolesa.ru/uploads/bnnews/2014/06/18/793b49f8aaa4d780bce4eae01243080c-995x0.jpg" alt="Owl Image"></div>
-  <div class="item"><img src="http://www.kolesa.ru/uploads/bnnews/2012/09/26/25282_1348669490_84031x796221-995x663.33333333333.jpg" alt="Owl Image"></div>
-  <div class="item"><img src="http://www.kolesa.ru/uploads/bnnews/2012/09/26/25282_1348669490_84031x169924-995x663.33333333333.jpg" alt="Owl Image"></div>
-  <div class="item"><img src="http://www.kolesa.ru/uploads/bnnews/2012/09/26/25282_1348669490_84031x480072-995x663.33333333333.jpg" alt="Owl Image"></div>
-  <div class="item"><img src="http://www.kolesa.ru/uploads/bnnews/2012/09/26/25282_1348669679_85303x012410-995x663.33333333333.jpg" alt="Owl Image"></div>
-
-</div>
-</section>
 
 
             <section class="descr-heading">
@@ -171,6 +182,31 @@
              		<img class="img-responsive header-pic block-img" src="/images/pic2.jpg" alt="">
           		</div>
 
+
+          		<section class="cite">
+          			<p class="blockquote">
+          				В современном мире с его невообразимой скоростью жизни намного важнее, чтобы находящиеся в пользовании устройства делали всё, сразу и желательно без участия человека: стиральная машинка, самостоятельно собирающая грязное бельё по дому и вовремя заказывающая доставку стирального порошка; холодильник и мультиварка с выходом в Интернет
+          			</p>
+          		</section>
+
+
+ <section>
+    <div id="owl-demo">
+
+  <div class="item"><img src="http://www.kolesa.ru/uploads/bnnews/2012/09/26/25282_1348669976_86097x778869-995x663.33333333333.jpg" alt="Owl Image"></div>
+  <div class="item"><img src="http://www.kolesa.ru/uploads/bnnews/2014/06/18/be6e61768da57106a134bebcf79c3352-995x0.jpg" alt="Owl Image"></div>
+  <div class="item"><img src="http://www.kolesa.ru/uploads/bnnews/2014/06/18/9e063c2b2be618ba0ce7b3b586d63063-995x0.jpg" alt="Owl Image"></div>
+  <div class="item"><img src="http://www.kolesa.ru/uploads/bnnews/2014/06/18/793b49f8aaa4d780bce4eae01243080c-995x0.jpg" alt="Owl Image"></div>
+  <div class="item"><img src="http://www.kolesa.ru/uploads/bnnews/2012/09/26/25282_1348669490_84031x796221-995x663.33333333333.jpg" alt="Owl Image"></div>
+  <div class="item"><img src="http://www.kolesa.ru/uploads/bnnews/2012/09/26/25282_1348669490_84031x169924-995x663.33333333333.jpg" alt="Owl Image"></div>
+  <div class="item"><img src="http://www.kolesa.ru/uploads/bnnews/2012/09/26/25282_1348669490_84031x480072-995x663.33333333333.jpg" alt="Owl Image"></div>
+  <div class="item"><img src="http://www.kolesa.ru/uploads/bnnews/2012/09/26/25282_1348669679_85303x012410-995x663.33333333333.jpg" alt="Owl Image"></div>
+
+</div>
+</section>
+
+
+
           	<section class="descr">
               <p>
                Ни для кого не секрет, что мир стремится к упрощению и универсализации. Неудобно и затратно иметь массу вещей, каждая из которых выполняет одну отдельную функцию, даже если эта самая функция выполняется превосходно.
@@ -182,6 +218,43 @@
             </section>
 
 
+ <section class="rating">
+ 		<div>
+
+ 		</div>
+ </section>
+
+
+
+ <section class="comments">
+ 		<div>
+ 			<button class="red-border" type="button">
+ 			Показать комментарии <span>38</span>
+ 			</button>
+ 		</div>
+ 		<div>
+ 			<button class="fill-green" type="button">Оставить комментарий</button>
+ 		</div>
+ </section>
+
+
+<footer>
+	<section class="footer">
+		<div>
+			<img class="logo footer" src="/images/logo-footer.png" alt="">
+		</div>
+		<section class="copyright">
+			<p>Все права защищены &copy; 2003-2014</p>
+			<p>Автомобильный журнал Колеса.ру</p>
+		</section>
+		<button type="button">Полная версия</button>
+	</section>
+
+	<section class="btn-backtop">
+		<button class="backtop" type="button">Наверх страницы</button>
+	</section>
+</footer>
+
 
 
 
@@ -191,9 +264,10 @@
     </div><!-- /.container -->
 
 
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<!--<script src="/scripts/selectholder.js"></script>-->
 
 
-        <script src="bower_components/jquery/dist/jquery.js"></script>
 
         <!-- build:js scripts/plugins.js -->
         <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/affix.js"></script>
@@ -210,19 +284,135 @@
         <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/tab.js"></script>
         <!-- endbuild -->
 
+
+        <script>
+				// preload image function
+function preload(arrayOfImages) {
+	$(arrayOfImages).each(function(){
+		$('<img/>')[0].src = this;
+	});
+}
+
+//$(document).ready(function(){
+
+  // set up radio boxes
+	$('.radioholder').each(function(){
+		$(this).children().hide();
+		var description = $(this).children('label').html();
+		$(this).append('<span class="desc">'+description+'</span>');
+		$(this).prepend('<span class="tick"></span>');
+		// on click, update radio boxes accordingly
+		$(this).click(function(){
+			$(this).children('input').prop('checked', true);
+			$(this).children('input').trigger('change');
+		});
+	});
+	// update radio holder classes when a radio element changes
+	$('input[type=radio]').change(function(){
+    $('input[type=radio]').each(function(){
+      if($(this).prop('checked') == true) {
+        $(this).parent().addClass('activeradioholder');
+      }
+			else $(this).parent().removeClass('activeradioholder');
+		});
+	});
+	// manually fire radio box change event on page load
+	$('input[type=radio]').change();
+
+	// set up select boxes
+	$('.selectholder').each(function(){
+		$(this).children().hide();
+		var description = $(this).children('label').text();
+		$(this).append('<span class="desc">'+description+'</span>');
+		$(this).append('<span class="pulldown"></span>');
+		// set up dropdown element
+		$(this).append('<div class="selectdropdown"></div>');
+	  $(this).children('select').children('option').each(function(){
+			if($(this).attr('value') != '0') {
+				$drop = $(this).parent().siblings('.selectdropdown');
+				var name = $(this).attr('value');
+				$drop.append('<span>'+name+'</span>');
+			}
+		});
+		// on click, show dropdown
+		$(this).click(function(){
+			if($(this).hasClass('activeselectholder')) {
+				// roll up roll up
+				$(this).children('.selectdropdown').slideUp(200);
+				$(this).removeClass('activeselectholder');
+				// change span back to selected option text
+				if($(this).children('select').val() != '0') {
+					$(this).children('.desc').fadeOut(100, function(){
+						$(this).text($(this).siblings("select").val());
+						$(this).fadeIn(100);
+					});
+				}
+			}
+			else {
+				// if there are any other open dropdowns, close 'em
+				$('.activeselectholder').each(function(){
+					$(this).children('.selectdropdown').slideUp(200);
+					// change span back to selected option text
+					if($(this).children('select').val() != '0') {
+						$(this).children('.desc').fadeOut(100, function(){
+							$(this).text($(this).siblings("select").val());
+							$(this).fadeIn(100);
+						});
+					}
+					$(this).removeClass('activeselectholder');
+				});
+				// roll down
+				$(this).children('.selectdropdown').slideDown(200);
+				$(this).addClass('activeselectholder');
+				// change span to show select box title while open
+				if($(this).children('select').val() != '0') {
+					$(this).children('.desc').fadeOut(100, function(){
+						$(this).text($(this).siblings("select").children("option[value=0]").text());
+						$(this).fadeIn(100);
+					});
+				}
+			}
+		});
+	});
+	// select dropdown click action
+	$('.selectholder .selectdropdown span').click(function(){
+		$(this).siblings().removeClass('active');
+		$(this).addClass('active');
+		var value = $(this).text();
+		$(this).parent().siblings('select').val(value);
+		$(this).parent().siblings('.desc').fadeOut(100, function(){
+			$(this).text(value);
+			$(this).fadeIn(100);
+		});
+	});
+
+	// preload hover images
+//  preload([
+//    'http://supereightstudio.com/img/radio_tick.png',
+//    'http://supereightstudio.com/img/pulldown.png',
+//    'http://supereightstudio.com/img/pulldown_hover.png'
+//  ]);
+
+//});
+
+		</script>
+
+
         <!-- build:js scripts/main.js -->
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
 
 
 
-<script src="/scripts/scrollReveal.js"></script>
+<!--<script src="/scripts/scrollReveal.js"></script>-->
  <script src="scripts/owl.carousel.js"></script>
+<!--
   <script>
 
       window.scrollReveal = new scrollReveal();
 
   </script>
+-->
   <script>
         $(document).ready(function() {
 
@@ -240,5 +430,56 @@
 
 
         </script>
+
+        <script>
+			$('.backtop').click(function() {
+  $("html, body").animate({ scrollTop: 0 }, "slow");
+  return false;
+});
+		</script>
+
+
+
+		<script>
+		// Hide Header on on scroll down
+var didScroll;
+var lastScrollTop = 0;
+var delta = 5;
+var navbarHeight = $('header').outerHeight();
+
+$(window).scroll(function(event){
+    didScroll = true;
+});
+
+setInterval(function() {
+    if (didScroll) {
+        hasScrolled();
+        didScroll = false;
+    }
+}, 250);
+
+function hasScrolled() {
+    var st = $(this).scrollTop();
+
+    // Make sure they scroll more than delta
+    if(Math.abs(lastScrollTop - st) <= delta)
+        return;
+
+    // If they scrolled down and are past the navbar, add class .nav-up.
+    // This is necessary so you never see what is "behind" the navbar.
+    if (st > lastScrollTop && st > navbarHeight){
+        // Scroll Down
+        $('header').removeClass('nav-down').addClass('nav-up');
+    } else {
+        // Scroll Up
+        if(st + $(window).height() < $(document).height()) {
+            $('header').removeClass('nav-up').addClass('nav-down');
+        }
+    }
+
+    lastScrollTop = st;
+}
+		</script>
+
 </body>
 </html>
