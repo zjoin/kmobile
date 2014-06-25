@@ -10,8 +10,15 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/font
 @import url(http://fonts.googleapis.com/css?family=Exo+2:400,100,700&subset=latin,cyrillic);
 
 
+
+/* ===============
+   SASS SETTINGS
+   =============== */
+
 $black: #282b2f;
 $btn-color: rgb( 53, 176, 103 );
+$green: rgb( 53, 176, 103 );
+$f-button: rgb( 10, 9, 9 );
 $white: #fff;
 $submenu-bg: #e5f0f0;
 $open-bg: #a5a5a5;
@@ -29,6 +36,11 @@ $sans12: 12px;
 $sans14: 12px;
 
 
+
+
+/* ===============
+   TMP SETTINGS
+   =============== */
 .browsehappy {
     margin: 0.2em 0;
     background: #ccc;
@@ -36,10 +48,33 @@ $sans14: 12px;
     padding: 0.2em 0;
 }
 
+//.tmp-fixed {
+//	position: fixed;
+//	top: 90px;
+//	right: 0;
+//	z-index: 5555;
+//	width: 100%;
+//	text-align: left;
+//}
+.nav-up {
+    top: -140px;
+}
 
+header {
+    position: fixed;
+    top: 0;
+    transition: top 0.4s ease-in-out;
+    width: 100%;
+	z-index: 555555;
+}
+
+/* ===============
+   GLOBAL SETTINGS
+   =============== */
+* {outline: none;}
 html, body { height: 100%; }
-body { padding: 152px 0 0 0; font-family: $exo; }
-
+body { padding: 0px 0 0 0; font-family: $exo; }
+//header { position: relative; z-index: 1;}
 .navbar-toggle {
   float: left;
 //  margin-left: 15px;
@@ -143,7 +178,7 @@ body { padding: 152px 0 0 0; font-family: $exo; }
 .article-user {
     border: 1px solid $br;
     border-radius: 6px;
-    margin-top: 20px;
+    margin-top: 75px;
     padding: 0 15px;
     & h1 {
         font-size: $exo18;
@@ -225,9 +260,13 @@ body { padding: 152px 0 0 0; font-family: $exo; }
 
 
 
+/* ===============
+   SEARCH SETTINGS
+   =============== */
+
 .sb-search {
     position: relative;
-    margin-top: -137px;
+    margin-top: -78px;
     width: 0%;
     min-width: 50px;
     height: 60px;
@@ -342,6 +381,12 @@ input[type="search"].sb-search-input {
 }
 
 
+
+/* ===============
+   SLIDER SETTINGS
+   =============== */
+
+.owl-wrapper-outer { margin: 30px 0; }
 #owl-demo .item{
   margin: 3px;
 }
@@ -350,6 +395,306 @@ input[type="search"].sb-search-input {
   width: 100%;
   height: auto;
 }
+
+
+
+
+
+/* ===============
+   SELECT SETTINGS
+   =============== */
+
+.selectholder a {
+  color: #2A817C;
+}
+
+.selectholder a:active,
+.selectholder a:focus,
+.selectholder a:hover {
+  color: #E87A31;
+}
+
+.radioholder {
+	width: 48%;
+	background: #fff;
+	margin-bottom: 1em;
+	font-size: 1.3em;
+	height: 2.4em;
+	color: #666;
+	-o-transition: .1s ease-out;
+	-ms-transition: .1s ease-out;
+	-moz-transition: .1s ease-out;
+	-webkit-transition: .1s ease-out;
+	transition: .1s ease-out;
+	cursor: pointer;
+}
+
+
+.activeradioholder {
+	background: #39A9A4;
+	color: #fff;
+}
+
+.radioholder .desc {
+	display: inline-block;
+	vertical-align: middle;
+	padding-left: .6em;
+	line-height: 2.4em;
+}
+
+.radioholder .tick {
+	display: inline-block;
+	vertical-align: middle;
+	width: 2.4em;
+	height: 100%;
+	background-color: #eee;
+	background-image: none;
+	-o-transition: .1s ease-out;
+	-ms-transition: .1s ease-out;
+	-moz-transition: .1s ease-out;
+	-webkit-transition: .1s ease-out;
+	transition: .1s ease-out;
+}
+
+.activeradioholder .tick {
+	background-color: #2A817C;
+	background-image: url('http://supereightstudio.com/img/radio_tick.png');
+	background-size: cover;
+}
+
+.radioholder:nth-child(odd) {
+	float: right;
+}
+
+.radioholder:nth-child(even) {
+	float: left;
+}
+
+.radioholder:hover {
+	background-color: #eee;
+}
+
+.radioholder:hover .tick {
+	background-color: #ddd;
+}
+
+.activeradioholder:hover {
+	background-color: #39A9A4;
+}
+
+.activeradioholder:hover .tick {
+	background-color: #2A817C;
+}
+
+.selectholder {
+  clear: both;
+	width: 100%;
+	background: $submenu-bg;
+	margin-bottom: 1em;
+	font-size: 1.3em;
+	height: 2.4em;
+	color: #666;
+	-o-transition: .1s ease-out;
+	-ms-transition: .1s ease-out;
+	-moz-transition: .1s ease-out;
+	-webkit-transition: .1s ease-out;
+	transition: .1s ease-out;
+	cursor: pointer;
+	position: fixed;
+}
+
+.selectholder .desc {
+	display: inline-block;
+	vertical-align: middle;
+	padding-left: .8em;
+	line-height: 2.4em;
+}
+
+.selectholder .pulldown {
+	float: right;
+	vertical-align: middle;
+	width: 2.4em;
+	height: 100%;
+	background-color: #ddd;
+	background-image: url('http://supereightstudio.com/img/pulldown.png');
+	background-size: cover;
+	-o-transition: .1s ease-out;
+	-ms-transition: .1s ease-out;
+	-moz-transition: .1s ease-out;
+	-webkit-transition: .1s ease-out;
+	transition: .1s ease-out;
+}
+
+.selectholder:hover,
+.activeselectholder {
+	background-color: #ddd;
+}
+
+.selectholder:hover .pulldown,
+.activeselectholder .pulldown {
+	background-color: #333;
+	background-image: url('http://supereightstudio.com/img/pulldown_hover.png');
+}
+
+.selectholder .selectdropdown {
+	position: relative;
+	top: 0;
+	left: 0;
+	background: #333;
+	color: #fff;
+	display: none;
+	clear: both;
+}
+
+.selectholder .selectdropdown span {
+	display: block;
+	border-bottom: solid 1px #555;
+	padding-left: .8em;
+	line-height: 2.4em;
+	width: 100%;
+	-o-transition: background-color .1s ease-out;
+	-ms-transition: background-color .1s ease-out;
+	-moz-transition: background-color .1s ease-out;
+	-webkit-transition: background-color .1s ease-out;
+	transition: background-color .1s ease-out;
+}
+
+.selectholder .selectdropdown span:last-child {
+	border-bottom: none;
+}
+
+.selectholder .selectdropdown span.active {
+	background-color: #2A817C;
+	background-image: url('http://supereightstudio.com/img/radio_tick.png');
+	background-repeat: no-repeat;
+	background-size: 1.6em 1.6em;
+	background-position: 98% 50%;
+}
+
+.selectholder .selectdropdown span:hover {
+	background-color: #555;
+}
+
+
+
+
+
+/* ===============
+   BLOCKQUOTE SETTINGS
+   =============== */
+
+.cite:before {
+	content: '';
+	position: absolute;
+	width: 20px;
+	height: 18px;
+	background: url(http://www.kolesa.ru/web/images/cite-pic.png);
+	background-size: contain;
+
+}
+
+.blockquote {
+		font-size: $exo15 ;
+		font-family: $exo;
+		margin: 0 38px;
+		border-left: 2px solid $br;
+		padding-left: 20px;
+	}
+
+
+/* ===============
+   RATING SETTINGS
+   =============== */
+
+
+
+
+
+
+
+/* ===============
+   COMMENTS SETTINGS
+   =============== */
+
+.comments {
+	text-align: center;
+	font-size: $sans14;
+	font-family: $sans;
+	padding: 25px 20px;
+	& button { width: 100%; border-radius: 20px; padding: .9em 2em; }
+	& span { font-weight: 700; }
+	& .red-border {
+		border: 1px solid $red;
+		padding: .6em 2em;
+		margin-bottom: 20px;
+		background: #fff;
+		background: url(/images/arr.png) no-repeat 95% 50%;
+	}
+	& .fill-green {
+		background: $green;
+		border: none;
+		color: #fff;
+	}
+}
+
+
+
+
+
+
+/* ===============
+   FOOTER SETTINGS
+   =============== */
+footer { text-align: center;
+	& .footer { background: $submenu-bg;  padding: 30px 0; }
+	& button {
+		border: 1px solid $f-button;
+		background: none;
+		border-radius: 20px;
+		padding: .3em 1.4em;
+		transition: all .4s;
+		font-size: $sans14;
+		font-family: $sans;
+		&:hover { background: $f-button; color: #fff;}
+	}
+}
+.logo.footer {
+	margin: 0;
+	padding: 0;
+}
+
+.copyright { padding: 5px 0; padding-bottom: 20px;
+	& p {
+		margin-bottom: 5px;
+		font-size: $sans12;
+		font-family: $sans;
+	}
+}
+
+.btn-backtop {
+	background: $black;
+	padding: 12px 20px;
+	& button {
+		border: 1px solid #fff;
+		color: #fff;
+		width: 100%;
+		font-size: $sans14;
+		font-family: $sans;
+
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @media (min-width: 0) {
