@@ -396,3 +396,5 @@ window.scrollReveal = (function (window) {
 
   return scrollReveal;
 })(window);
+
+ window.scrollReveal = new scrollReveal();
