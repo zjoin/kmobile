@@ -9,9 +9,20 @@
       <link rel="stylesheet" href="styles/main.css">
         <script src="bower_components/modernizr/modernizr.js"></script>
 
+
+<!--
+
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0a4/jquery.mobile-1.0a4.min.css" />
+<link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.mobile/0.3.0/jquery.mobile.theme-1.1.0.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.mobile/0.3.0/jquery.mobile.structure-1.1.0.css">
+-->
+
     </head>
     <body> <!--data-scroll-reveal-->
-   <header>
+
+   <header class="">
+           <div class="row">
+           <div class="col-xs-12">
 
 <!-- Push menu-->
     <div class="navmenu navmenu-default navmenu-fixed-left offcanvas">
@@ -30,7 +41,7 @@
 
       <form action="">
       	<section class="reg">
-      		<button class="enter" type="button">Вход</button>
+      		    <a href="enter.html"><button class="enter" type="button">Вход</button></a>
       		<button class="register" type="button">Регистрация</button>
       	</section>
       </form>
@@ -87,6 +98,7 @@
 -->
 
 
+<!--
    <section>
 	  <div class="selectholder">
     <label>Новости</label>
@@ -98,31 +110,63 @@
     </select>
   </div>
 </section>
+-->
+
+<select id="submenu">
+    <option value="hide">Новости</option>
+    <option value="january" rel="icon-temperature">Статьи</option>
+    <option value="february">Тест-драйвы</option>
+    <option value="february">Гаджеты</option>
+</select>
 
 
-  </header>
-    <div class="container">
-         <div class="row">
-          <div class="col-xs-12">
-              <section   class="img article-user text-center">
+        </div>
+    </div>
+</header>
 
-
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <section   class="img article-user text-center">
               <ol class="breadcrumb">
                   <li><a href="#">Новости</a></li>
                   <li><a href="#">Авторынок</a></li>
               </ol>
-
-                 <h1>Как сэкономить миллион рублей при покупке кроссовера?</h1>
-             <div><img class="img-responsive header-pic" src="/images/pic-1.jpg" alt=""></div>
-
-              <div class="iconrate">
-                  <span class="icon-eye"><em>1568</em></span>
-                  <span class="icon-comment"><em>356</em></span>
-                  <span class="icon-rate"><em>54</em></span>
+                 <h1 class="head-news">Как сэкономить миллион рублей при покупке кроссовера?</h1>
+             <div class="heading-picture">
+                  <img class="img-responsive header-pic w-pic" src="/images/index1.png" alt="">
               </div>
 
+             <div class="iconrate">
+    <div>
+        <span class="icon-eye"></span>
+        <em>1568</em>
+    </div>
+    <div>
+        <span class="icon-comment"></span>
+        <em>356</em>
+    </div>
+    <div>
+        <span class="icon-rate"></span>
+        <em>54</em>
+    </div>
+</div> <!-- end iconrate -->
 
-              <section class="user-writer">
+
+
+<section class="user-writer">
+
+                 <div class="pull-left">
+                     <img class="img-circle" src="/images/user-writer.png" alt="user">
+                 </div>
+                 <div class="user-body">
+    				<h4 class="media-heading">Илья Огородников</h4>
+    				<p>
+    					Обозреватель Колеса.ру
+    				</p>
+  				</div>
+
+<!--
                   <div class="media">
   						<a class="pull-left" href="#">
     						<img class="media-object img-circle" src="/images/user-writer.png" 	alt="user">
@@ -133,10 +177,10 @@
     					Обозреватель Колеса.ру
     				</p>
   				</div>
-				</div> <!--end media-->
-              </section>
-
-            </section>
+				</div>
+-->
+</section>
+</section> <!-- end article-user -->
 
             <section class="descr">
               <p>
@@ -148,72 +192,241 @@
               </p>
             </section>
 
+
+
+
+
+
             <div>
              	<img class="img-responsive header-pic block-img" src="/images/pic2.jpg" alt="">
              </div>
 
 
+<section class="select-tabs">
+    <div class="row">
+        <div class="col-xs-6">
+
+<select id="mounth">
+    <option value="hide">Модель</option>
+    <option value="january" rel="icon-temperature">January</option>
+    <option value="february">February</option>
+    <option value="march">March</option>
+    <option value="april">April</option>
+    <option value="may">May</option>
+    <option value="june">June</option>
+    <option value="july">July</option>
+    <option value="august">August</option>
+    <option value="september">September</option>
+    <option value="october">October</option>
+    <option value="november">November</option>
+    <option value="december">December</option>
+</select>
+</div>
+
+<div class="col-xs-6">
+<select id="year">
+    <option value="hide">-- Year --</option>
+    <option value="2010">2010</option>
+    <option value="2011">2011</option>
+    <option value="2012">2012</option>
+    <option value="2013">2013</option>
+    <option value="2014">2014</option>
+    <option value="2015">2015</option>
+</select>
+ </div>
+</div>
+   </section> <!-- end select-tabs -->
 
 
-            <section class="descr-heading">
-            	<h5>И уже совершенно не важно</h5>
-            	 <p class="h-descr">
-Что половина функций выполняется с посредственным качеством, а часть задач - откровенно плохо.
-              </p>
-               <p>
+<section class="big-news">
+    <div>
+        <img class="img-responsive header-pic" src="/images/pic2.jpg" alt="">
+         <ol class="breadcrumb">
+                  <li><a href="#">Новости</a></li>
+                  <li><a href="#">Авторынок</a></li>
+              </ol>
+                 <h1 class="head-news">Как сэкономить миллион рублей при покупке кроссовера?</h1>
+
+
+
+<div class="iconrate">
+    <div>
+        <span class="icon-eye"></span>
+        <em>1568</em>
+    </div>
+    <div>
+        <span class="icon-comment"></span>
+        <em>356</em>
+    </div>
+    <div>
+        <span class="icon-rate"></span>
+        <em>54</em>
+    </div>
+</div> <!-- end iconrate -->
+</div>
+</section>
+
+
+<section class="small-news clearfix">
+      <div class="pull-left small-img">
+          <img class="img-responsive" src="http://placehold.it/54" alt="">
+      </div>
+      <div class="b-n-descr">
+          <ol class="breadcrumb">
+            <li><a href="#">Новости</a></li>
+            <li><a href="#">Авторынок</a></li>
+          </ol>
+          <p>
+              Ford Focus RS достанется мотор от Mustang
+          </p>
+          <div class="iconrate">
+    <div>
+        <span class="icon-eye"></span>
+        <em>1568</em>
+    </div>
+    <div>
+        <span class="icon-comment"></span>
+        <em>356</em>
+    </div>
+    <div>
+        <span class="icon-rate"></span>
+        <em>54</em>
+    </div>
+</div>
+      </div>
+</section>
+<section class="small-news clearfix">
+      <div class="pull-left small-img">
+          <img class="img-responsive" src="http://placehold.it/54" alt="">
+      </div>
+      <div class="b-n-descr">
+          <ol class="breadcrumb">
+            <li><a href="#">Новости</a></li>
+            <li><a href="#">Авторынок</a></li>
+          </ol>
+          <p>
+              Ford Focus RS достанется мотор от Mustang
+              Ford Focus RS достанется мотор от Mustang
+          </p>
+          <div class="iconrate">
+    <div>
+        <span class="icon-eye"></span>
+        <em>1568</em>
+    </div>
+    <div>
+        <span class="icon-comment"></span>
+        <em>356</em>
+    </div>
+    <div>
+        <span class="icon-rate"></span>
+        <em>54</em>
+    </div>
+</div>
+      </div>
+</section>
+<section class="small-news clearfix">
+      <div class="pull-left small-img">
+          <img class="img-responsive" src="http://placehold.it/54" alt="">
+      </div>
+      <div class=" b-n-descr">
+          <ol class="breadcrumb">
+            <li><a href="#">Новости</a></li>
+            <li><a href="#">Авторынок</a></li>
+          </ol>
+          <p>
+              Ford Focus RS достанется мотор от Mustang
+              Ford Focus RS достанется мотор от Mustang
+          </p>
+          <div class="iconrate">
+    <div>
+        <span class="icon-eye"></span>
+        <em>1568</em>
+    </div>
+    <div>
+        <span class="icon-comment"></span>
+        <em>356</em>
+    </div>
+    <div>
+        <span class="icon-rate"></span>
+        <em>54</em>
+    </div>
+</div>
+      </div>
+      <button class="red-border d-load" type="button">Загрузить еще</button>
+      <ul class="pagination">
+          <li class="disabled"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+          <li class="active"><a href="#">2 <span class="sr-only">(current)</span></a></li>
+          <li class="a"><a href="#">3 <span class="sr-only">(current)</span></a></li>
+          <li class=""><a href="#">4 <span class="sr-only">(current)</span></a></li>
+          <li class=""><a href="#">5 <span class="sr-only">(current)</span></a></li>
+          <li class=""><a href="#">6 <span class="sr-only">(current)</span></a></li>
+          <li class=""><a href="#">7 <span class="sr-only">(current)</span></a></li>
+          ...
+      </ul>
+</section>
+
+
+
+
+<section class="descr-heading">
+    <h5>И уже совершенно не важно</h5>
+        <p class="h-descr">
+            Что половина функций выполняется с посредственным качеством,
+            а часть задач - откровенно плохо.
+        </p>
+        <p>
+           В современном мире с его невообразимой скоростью жизни намного важнее, чтобы находящиеся в                    пользовании устройства делали всё, сразу и желательно без участия человека: стиральная машинка, с            амостоятельно собирающая грязное бельё по дому и вовремя заказывающая доставку стирального                    порошка; холодильник и мультиварка с выходом в Интернет, самостоятельно выкладывающие в Инстаграм            снимки содержащейся еды; телефон с одной кнопкой, заменяющий одновременно плеер, фотоаппарат,                книги, карту памяти, компьютер, а в отдельных тяжелых случаях и мозг…
+        </p>
+        <p>
 В современном мире с его невообразимой скоростью жизни намного важнее, чтобы находящиеся в пользовании устройства делали всё, сразу и желательно без участия человека: стиральная машинка, самостоятельно собирающая грязное бельё по дому и вовремя заказывающая доставку стирального порошка; холодильник и мультиварка с выходом в Интернет, самостоятельно выкладывающие в Инстаграм снимки содержащейся еды; телефон с одной кнопкой, заменяющий одновременно плеер, фотоаппарат, книги, карту памяти, компьютер, а в отдельных тяжелых случаях и мозг…
-              </p>
-                     <p>
+        </p>
+        <p>
 В современном мире с его невообразимой скоростью жизни намного важнее, чтобы находящиеся в пользовании устройства делали всё, сразу и желательно без участия человека: стиральная машинка, самостоятельно собирающая грязное бельё по дому и вовремя заказывающая доставку стирального порошка; холодильник и мультиварка с выходом в Интернет, самостоятельно выкладывающие в Инстаграм снимки содержащейся еды; телефон с одной кнопкой, заменяющий одновременно плеер, фотоаппарат, книги, карту памяти, компьютер, а в отдельных тяжелых случаях и мозг…
-              </p>
-                     <p>
-В современном мире с его невообразимой скоростью жизни намного важнее, чтобы находящиеся в пользовании устройства делали всё, сразу и желательно без участия человека: стиральная машинка, самостоятельно собирающая грязное бельё по дому и вовремя заказывающая доставку стирального порошка; холодильник и мультиварка с выходом в Интернет, самостоятельно выкладывающие в Инстаграм снимки содержащейся еды; телефон с одной кнопкой, заменяющий одновременно плеер, фотоаппарат, книги, карту памяти, компьютер, а в отдельных тяжелых случаях и мозг…
-              </p>
-            </section>
+        </p>
+ </section>
 
 
-            	<div class="img-margin">
-             		<img class="img-responsive header-pic block-img" src="/images/pic2.jpg" alt="">
-             	</div>
+<div class="img-margin">
+    <img class="img-responsive header-pic block-img" src="/images/pic2.jpg" alt="">
+</div>
 
-          		<div class="img-margin">
-             		<img class="img-responsive header-pic block-img" src="/images/pic2.jpg" alt="">
-          		</div>
+<div class="img-margin">
+    <img class="img-responsive header-pic block-img" src="/images/pic2.jpg" alt="">
+</div>
 
 
-          		<section class="cite">
-          			<p class="blockquote">
-          				В современном мире с его невообразимой скоростью жизни намного важнее, чтобы находящиеся в пользовании устройства делали всё, сразу и желательно без участия человека: стиральная машинка, самостоятельно собирающая грязное бельё по дому и вовремя заказывающая доставку стирального порошка; холодильник и мультиварка с выходом в Интернет
-          			</p>
-          		</section>
+<section class="cite">
+    <p class="blockquote">
+        В современном мире с его невообразимой скоростью жизни намного важнее, чтобы находящиеся в пользовании устройства делали всё, сразу и желательно без участия человека: стиральная машинка, самостоятельно собирающая грязное бельё по дому и вовремя заказывающая доставку стирального порошка; холодильник и мультиварка с выходом в Интернет
+    </p>
+</section>
 
 
  <section>
     <div id="owl-demo">
 
-  <div class="item"><img src="http://www.kolesa.ru/uploads/bnnews/2012/09/26/25282_1348669976_86097x778869-995x663.33333333333.jpg" alt="Owl Image"></div>
-  <div class="item"><img src="http://www.kolesa.ru/uploads/bnnews/2014/06/18/be6e61768da57106a134bebcf79c3352-995x0.jpg" alt="Owl Image"></div>
-  <div class="item"><img src="http://www.kolesa.ru/uploads/bnnews/2014/06/18/9e063c2b2be618ba0ce7b3b586d63063-995x0.jpg" alt="Owl Image"></div>
-  <div class="item"><img src="http://www.kolesa.ru/uploads/bnnews/2014/06/18/793b49f8aaa4d780bce4eae01243080c-995x0.jpg" alt="Owl Image"></div>
-  <div class="item"><img src="http://www.kolesa.ru/uploads/bnnews/2012/09/26/25282_1348669490_84031x796221-995x663.33333333333.jpg" alt="Owl Image"></div>
-  <div class="item"><img src="http://www.kolesa.ru/uploads/bnnews/2012/09/26/25282_1348669490_84031x169924-995x663.33333333333.jpg" alt="Owl Image"></div>
-  <div class="item"><img src="http://www.kolesa.ru/uploads/bnnews/2012/09/26/25282_1348669490_84031x480072-995x663.33333333333.jpg" alt="Owl Image"></div>
-  <div class="item"><img src="http://www.kolesa.ru/uploads/bnnews/2012/09/26/25282_1348669679_85303x012410-995x663.33333333333.jpg" alt="Owl Image"></div>
+  <div class="item"><img src="/images/pic.jpg" alt="Owl Image"></div>
+  <div class="item"><img src="/images/pic.jpg" alt="Owl Image"></div>
+  <div class="item"><img src="/images/pic.jpg" alt="Owl Image"></div>
+  <div class="item"><img src="/images/pic.jpg" alt="Owl Image"></div>
+  <div class="item"><img src="/images/pic.jpg" alt="Owl Image"></div>
+  <div class="item"><img src="/images/pic.jpg" alt="Owl Image"></div>
+  <div class="item"><img src="/images/pic.jpg" alt="Owl Image"></div>
+  <div class="item"><img src="/images/pic.jpg" alt="Owl Image"></div>
 
 </div>
 </section>
 
 
 
-          	<section class="descr">
-              <p>
-               Ни для кого не секрет, что мир стремится к упрощению и универсализации. Неудобно и затратно иметь массу вещей, каждая из которых выполняет одну отдельную функцию, даже если эта самая функция выполняется превосходно.
-              </p>
-
-               <p>
+<section class="descr">
+    <p>
+        Ни для кого не секрет, что мир стремится к упрощению и универсализации. Неудобно и затратно иметь массу вещей, каждая из которых выполняет одну отдельную функцию, даже если эта самая функция выполняется превосходно.
+    </p>
+    <p>
 В современном мире с его невообразимой скоростью жизни намного важнее, чтобы находящиеся в пользовании устройства делали всё, сразу и желательно без участия человека: стиральная машинка, самостоятельно собирающая грязное бельё по дому и вовремя заказывающая доставку стирального порошка; холодильник и мультиварка с выходом в Интернет, самостоятельно выкладывающие в Инстаграм снимки содержащейся еды; телефон с одной кнопкой, заменяющий одновременно плеер, фотоаппарат, книги, карту памяти, компьютер, а в отдельных тяжелых случаях и мозг…
-              </p>
-            </section>
+    </p>
+</section>
 
 
  <section class="rating">
@@ -278,7 +491,7 @@
 
 
 
-          	<section class="descr">
+<section class="descr">
               <p>
                Ни для кого не секрет, что мир стремится к упрощению и универсализации. Неудобно и затратно иметь массу вещей, каждая из которых выполняет одну отдельную функцию, даже если эта самая функция выполняется превосходно.
               </p>
@@ -286,7 +499,7 @@
                <p>
 В современном мире с его невообразимой скоростью жизни намного важнее, чтобы находящиеся в пользовании устройства делали всё, сразу и желательно без участия человека: стиральная машинка, самостоятельно собирающая грязное бельё по дому и вовремя заказывающая доставку стирального порошка; холодильник и мультиварка с выходом в Интернет, самостоятельно выкладывающие в Инстаграм снимки содержащейся еды; телефон с одной кнопкой, заменяющий одновременно плеер, фотоаппарат, книги, карту памяти, компьютер, а в отдельных тяжелых случаях и мозг…
               </p>
-            </section>
+</section>
 
 
      <section class="user-man clearfix">
@@ -326,15 +539,32 @@
    		<div>
    			<h2 class="gl-header">Конкуренты</h2>
    			<div class="bl-layer img-margin">
-   				<img class="img-responsive header-pic" src="/images/pic-1.jpg" alt="">
+   				<img class="img-responsive header-pic" src="/images/pic2.jpg" alt="">
+   				<h3>Porsche Cayenne <br><span>Мир меняется. Наши принципы – нет.</span></h3>
+
    			</div>
    			<div class="bl-layer img-margin">
-   				<div><img class="img-responsive header-pic" src="/images/pic-1.jpg" alt=""></div>
+   				<div><img class="img-responsive header-pic" src="/images/pic2.jpg" alt=""></div>
+   				<h3>Porsche Cayenne <br><span>Мир меняется. Наши принципы – нет.</span></h3>
    			</div>
    		</div>
    </section>
 
 
+
+
+
+
+
+   <section class="red-dotted">
+       <div>
+           <h2 class="gl-header-unline">Важно знать, привозя автомобиль из Белоруссии:</h2>
+           <section class="descr">
+          <p>
+               Ни для кого не секрет, что мир стремится к упрощению и универсализации. Неудобно и затратно иметь массу вещей, каждая из которых выполняет одну отдельную функцию, даже если эта самая функция выполняется превосходно.
+           </p>
+            </section>
+       </div>
 
      <section class="descr">
           <p>
@@ -345,6 +575,43 @@
 В современном мире с его невообразимой скоростью жизни намного важнее, чтобы находящиеся в пользовании устройства делали всё, сразу и желательно без участия человека: стиральная машинка, самостоятельно собирающая грязное бельё по дому и вовремя заказывающая доставку стирального порошка; холодильник и мультиварка с выходом в Интернет, самостоятельно выкладывающие в Инстаграм снимки содержащейся еды; телефон с одной кнопкой, заменяющий одновременно плеер, фотоаппарат, книги, карту памяти, компьютер, а в отдельных тяжелых случаях и мозг…
              </p>
             </section>
+
+            <div class="dotted descr one">
+                <p>
+                    В современном мире с его невообразимой скоростью жизни намного важнее, чтобы находящиеся в пользовании устройства делали всё, сразу и желательно без участия человека: стиральная машинка, самостоятельно собирающая грязное бельё по дому и вовремя заказывающая
+                </p>
+            </div>
+
+             <div class="dotted descr two">
+                <p>
+                    В современном мире с его невообразимой скоростью жизни намного важнее, чтобы находящиеся в пользовании устройства делали всё, сразу и желательно без участия человека: стиральная машинка, самостоятельно собирающая грязное бельё по дому и вовремя заказывающая
+                </p>
+            </div>
+
+             <div class="dotted descr three">
+                <p>
+                    В современном мире с его невообразимой скоростью жизни намного важнее, чтобы находящиеся в пользовании устройства делали всё, сразу и желательно без участия человека: стиральная машинка, самостоятельно собирающая грязное бельё по дому и вовремя заказывающая
+                </p>
+            </div>
+ </section>
+
+
+ <section class="block-tabs">
+     <!-- Nav tabs -->
+<ul class="nav nav-tabs" role="tablist">
+  <li class="active"><a href="#home" role="tab" data-toggle="tab">Chevrolet Cobalt 1.5 AT</a></li>
+  <li><a href="#profile" role="tab" data-toggle="tab">Lexus IS 300h</a></li>
+  <li><a href="#messages" role="tab" data-toggle="tab">Chevrolet Cobalt 1.5 AT</a></li>
+
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+  <div class="tab-pane active" id="home">.bkjbkjb..</div>
+  <div class="tab-pane" id="profile">.bkjbkjb..</div>
+  <div class="tab-pane" id="messages">.kbklbj..</div>
+</div>
+ </section>
 
 
 
@@ -386,9 +653,15 @@
     </div><!-- /.container -->
 
 
-<script src="bower_components/jquery/dist/jquery.js"></script>
-<script src="/scripts/selectholder.js"></script>
-
+<!--<script src="bower_components/jquery/dist/jquery.js"></script>-->
+<script src="//cdn.jsdelivr.net/jquery/2.1.1/jquery.js"></script>
+<!--<script src="/scripts/selectholder.js"></script>-->
+<script src="scripts/jquery.customSelect.min.js"></script>
+<script>
+//    $(document).ready(function(){
+    $('#mounth, #submenu').customSelect();
+//});
+    </script>
 
         <!-- build:js scripts/plugins.js -->
         <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/affix.js"></script>
@@ -411,7 +684,7 @@
  <!-- endbuild -->
 
 <script src="/scripts/scrollReveal.js"></script>
- <script src="scripts/owl.carousel.js"></script>
+<script src="scripts/owl.carousel.js"></script>
 
 
 
