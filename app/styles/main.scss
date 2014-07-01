@@ -22,6 +22,9 @@ $f-button: rgb( 10, 9, 9 );
 $br: rgb( 238, 238, 238 );
 $like-number: rgb( 68, 68, 68 );
 $iconrate: rgb( 143, 143, 143 );
+$foget: #757575;
+$p-color: #8f8f8f;
+$bg-reg: #f8f8f8;
 $rate-dark: #35b171;
 $rate-light: #49b97f;
 $white: #fff;
@@ -201,6 +204,7 @@ body { padding: 0px 0 0 0; font-family: $exo; }
     border: 1px solid $br;
     border-radius: 6px;
     margin-top: 165px;
+	margin-bottom: 25px;
     padding: 0 15px;
 }
 
@@ -334,19 +338,19 @@ input[type="search"].sb-search-input {
     -webkit-border-radius: 0px;
 }
 .sb-search-input::-webkit-input-placeholder {
-    color: #efb480;
+    color: $black;
 }
 
 .sb-search-input:-moz-placeholder {
-    color: #efb480;
+    color: $black;
 }
 
 .sb-search-input::-moz-placeholder {
-    color: #efb480;
+    color: $black;
 }
 
 .sb-search-input:-ms-input-placeholder {
-    color: #efb480;
+    color: $black;
 }
 
 .sb-icon-search,
@@ -418,17 +422,61 @@ input[type="search"].sb-search-input {
 /* ===============
    SLIDER SETTINGS
    =============== */
+.owl-gallery {
+	padding-top: 1px;
+	padding-bottom: 15px;
+	border-top: 1px solid #fafcfc;
+//	background: #fafcfc;
+	 background: url(/images/top-bg.png) top left repeat-x,
+		 		 url(/images/bottom-bg.png) bottom left repeat-x;
+	margin: 25px 0;
 
-.owl-wrapper-outer { margin: 30px 0; }
+	& .owk-descr {
+		display: table;
+		width: 80%;
+		position: absolute;
+		top:0;bottom:0;left:0;right:0;
+		margin: auto;
+		color: $white;
+		text-align: center;
+		& p:last-child { font-size: $exo16; }
+	}
+	& .iconrate {
+		margin: 0;
+	& div em {
+		color: $white;
+	}
+	}
+}
+
+.bg-layer {
+  background: #282b2f;
+  border-radius: 6px;
+  position: relative;
+}
+
+
+//.owl-wrapper-outer { margin: 30px 0;  }
 #owl-demo .item{
   margin: 3px;
+  padding: 0 15px;
 }
 #owl-demo .item img{
   display: block;
   width: 100%;
   height: auto;
+  opacity: .4;
+  border-radius: 6px;
 }
 
+.owk-head {
+	padding-left: 15px;
+}
+
+.long-bg {
+	padding-left: 0;
+	padding-right: 0;
+}
 
 
 
@@ -437,177 +485,27 @@ input[type="search"].sb-search-input {
    SELECT SETTINGS
    =============== */
 
-.selectholder a {
-  color: #2A817C;
+
+
+
+
+
+/* ===============
+   PAGINATION SETTINGS
+   =============== */
+.pagination { display: table; }
+.pagination > li { display: table-cell; width: 15%; }
+.pagination li  a { color: $p-color; font-family: $sans; border:none; }
+.pagination > .active > a {
+	background: none;
+	border: none;
+	font-weight: 700;
+	color: $p-color;
 }
 
-.selectholder a:active,
-.selectholder a:focus,
-.selectholder a:hover {
-  color: #E87A31;
+.pagination > .active > a:hover {
+	background: $btn-color;
 }
-
-.radioholder {
-	width: 48%;
-	background: #fff;
-	margin-bottom: 1em;
-	font-size: 1.3em;
-	height: 2.4em;
-	color: #666;
-	-o-transition: .1s ease-out;
-	-ms-transition: .1s ease-out;
-	-moz-transition: .1s ease-out;
-	-webkit-transition: .1s ease-out;
-	transition: .1s ease-out;
-	cursor: pointer;
-}
-
-
-.activeradioholder {
-	background: #39A9A4;
-	color: #fff;
-}
-
-.radioholder .desc {
-	display: inline-block;
-	vertical-align: middle;
-	padding-left: .6em;
-	line-height: 2.4em;
-}
-
-.radioholder .tick {
-	display: inline-block;
-	vertical-align: middle;
-	width: 2.4em;
-	height: 100%;
-	background-color: #eee;
-	background-image: none;
-	-o-transition: .1s ease-out;
-	-ms-transition: .1s ease-out;
-	-moz-transition: .1s ease-out;
-	-webkit-transition: .1s ease-out;
-	transition: .1s ease-out;
-}
-
-.activeradioholder .tick {
-	background-color: #2A817C;
-	background-image: url('http://supereightstudio.com/img/radio_tick.png');
-	background-size: cover;
-}
-
-.radioholder:nth-child(odd) {
-	float: right;
-}
-
-.radioholder:nth-child(even) {
-	float: left;
-}
-
-.radioholder:hover {
-	background-color: #eee;
-}
-
-.radioholder:hover .tick {
-	background-color: #ddd;
-}
-
-.activeradioholder:hover {
-	background-color: #39A9A4;
-}
-
-.activeradioholder:hover .tick {
-	background-color: #2A817C;
-}
-
-.selectholder {
-  clear: both;
-	width: 100%;
-	background: $submenu-bg;
-	margin-bottom: 1em;
-	font-size: 1.3em;
-	height: 2.4em;
-	color: #666;
-	-o-transition: .1s ease-out;
-	-ms-transition: .1s ease-out;
-	-moz-transition: .1s ease-out;
-	-webkit-transition: .1s ease-out;
-	transition: .1s ease-out;
-	cursor: pointer;
-	position: fixed;
-}
-
-.selectholder .desc {
-	display: inline-block;
-	vertical-align: middle;
-	padding-left: .8em;
-	line-height: 2.4em;
-}
-
-.selectholder .pulldown {
-	float: right;
-	vertical-align: middle;
-	width: 2.4em;
-	height: 100%;
-	background-color: #ddd;
-	background-image: url('http://supereightstudio.com/img/pulldown.png');
-	background-size: cover;
-	-o-transition: .1s ease-out;
-	-ms-transition: .1s ease-out;
-	-moz-transition: .1s ease-out;
-	-webkit-transition: .1s ease-out;
-	transition: .1s ease-out;
-}
-
-.selectholder:hover,
-.activeselectholder {
-	background-color: #ddd;
-}
-
-.selectholder:hover .pulldown,
-.activeselectholder .pulldown {
-	background-color: #333;
-	background-image: url('http://supereightstudio.com/img/pulldown_hover.png');
-}
-
-.selectholder .selectdropdown {
-	position: relative;
-	top: 0;
-	left: 0;
-	background: #333;
-	color: #fff;
-	display: none;
-	clear: both;
-}
-
-.selectholder .selectdropdown span {
-	display: block;
-	border-bottom: solid 1px #555;
-	padding-left: .8em;
-	line-height: 2.4em;
-	width: 100%;
-	-o-transition: background-color .1s ease-out;
-	-ms-transition: background-color .1s ease-out;
-	-moz-transition: background-color .1s ease-out;
-	-webkit-transition: background-color .1s ease-out;
-	transition: background-color .1s ease-out;
-}
-
-.selectholder .selectdropdown span:last-child {
-	border-bottom: none;
-}
-
-.selectholder .selectdropdown span.active {
-	background-color: #2A817C;
-	background-image: url('http://supereightstudio.com/img/radio_tick.png');
-	background-repeat: no-repeat;
-	background-size: 1.6em 1.6em;
-	background-position: 98% 50%;
-}
-
-.selectholder .selectdropdown span:hover {
-	background-color: #555;
-}
-
 
 
 
@@ -785,7 +683,7 @@ top: 0; right: -2px;
         transition: all .3s;
 }
 .red-border.d-load {
-    margin-top: 50px;
+    margin-top: 25px;
     margin-bottom: 0;
     &:hover {
         background: $red;
@@ -901,7 +799,7 @@ top: 0; right: -2px;
     height: 35px;
     border-radius: 50%;
     border: 2px solid $red;
-    padding: 4px 10px;
+    padding: 4px 11px;
 }
 
 .dotted.descr.two:before {
@@ -912,7 +810,7 @@ top: 0; right: -2px;
     height: 35px;
     border-radius: 50%;
     border: 2px solid $red;
-    padding: 4px 10px;
+    padding: 4px 11px;
 }
 
 .dotted.descr.three:before {
@@ -923,7 +821,7 @@ top: 0; right: -2px;
     height: 35px;
     border-radius: 50%;
     border: 2px solid $red;
-    padding: 4px 10px;
+    padding: 4px 11px;
 }
 
 .nav.nav-tabs a {
@@ -1031,8 +929,23 @@ top: 0; right: -2px;
 
 
 .customSelect {
-     background: $submenu-bg url(/images/arrow.png) no-repeat right center;
+     background: $submenu-bg url(/images/arrow.png) no-repeat right 25px center;
      width: 100%;
+	 padding: 15px;
+}
+
+#mark + .customSelect,
+#model + .customSelect {
+	border: 1px solid #e3e3e3;
+	padding: 10px;
+	background: #f9f9fb;
+background: url(/images/arrow.png) no-repeat right 15px center, -moz-linear-gradient(top, #f9f9fb 0%, #f2f2f4 100%);
+background: url(/images/arrow.png) no-repeat right 15px center,  -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f9f9fb), color-stop(100%,#f2f2f4));
+background: url(/images/arrow.png) no-repeat right 15px center, -webkit-linear-gradient(top, #f9f9fb 0%,#f2f2f4 100%);
+background: url(/images/arrow.png) no-repeat right 15px center, -o-linear-gradient(top, #f9f9fb 0%,#f2f2f4 100%);
+background: url(/images/arrow.png) no-repeat right 15px center, -ms-linear-gradient(top, #f9f9fb 0%,#f2f2f4 100%);
+background: url(/images/arrow.png) no-repeat right 15px center,  linear-gradient(to bottom, #f9f9fb 0%,#f2f2f4 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9fb', endColorstr='#f2f2f4',GradientType=0 );
 }
 
 
@@ -1065,7 +978,7 @@ top: 0; right: -2px;
    SMALL NEWS SETTINGS
    =============== */
 .small-news {
-    margin: 20px 0;
+    margin: 25px 0;
     & .breadcrumb {
         padding-top: 0;
         padding-left: 0;
@@ -1161,11 +1074,90 @@ footer { text-align: center;
 }
 
 
+/* ===============
+   CONTAINER ENTER SETTINGS
+   =============== */
+.container-enter {
 
+}
 
+.form-register input {
+	width: 100%;
+	border: 1px solid #e3e3e3;
+	padding: 8px 15px;
+	font-size: $exo16;
+}
 
+.button-green {
+	width: 100%;
+	border-radius: 20px;
+	border: none;
+	background: $btn-color;
+	padding: 10px 0;
+	color: $white;
+	font-size: $exo16;
+}
 
+.e-and-forget {
+	text-align: center;
+	& a {
+		color: $foget;
+		font-size: 13px;
+	}
+	& a:first-child {
+		padding-right: 10px;
+	}
+}
 
+.form-register.form-enter {
+	margin-top: 58px;
+	position: relative;
+	z-index: 555555;
+	& .name {
+		border-top: 1px solid #f1ecec;
+		padding-top: 22px;
+
+	}
+}
+.social-icons { text-align: center; }
+.social-vk {
+	display: inline-block;
+	width: 46px;
+	height: 46px;
+	margin-right: 25px;
+}
+
+.social-vk:last-child {
+	margin-right: 0;
+}
+
+#name {
+	background: url(/images/bg-user.png) no-repeat right 15px center;
+}
+
+#pass {
+	background: url(/images/pass.png) no-repeat right 15px center;
+}
+
+.b-s-descr {
+	border-bottom: 1px solid #f1ecec;
+	margin-bottom: 15px;
+}
+
+.s-descr {
+	color: #666;
+	font-size: $exo16;
+	position: relative;
+	top: 20px;
+	width: 150px;
+	margin: auto;
+	margin-bottom: 10px;
+	background: white;
+}
+
+.s-b-icons {
+	padding: 10px 0;
+}
 
 /* ===============
    SPRITE SETTINGS
@@ -1238,6 +1230,29 @@ footer { text-align: center;
 .icon-sprite-s-full-star {
   background-position: 0 -310px;
 }
+
+
+//.w-eye {
+//	display: block;
+//	width: 16px;
+//	height: 16px;
+//	background: red;
+//}
+//icon-sprite-sprite, .icon-sprite-w-comment, .icon-sprite-w-eye, .icon-sprite-w-rate {
+//  background: url('/images/icon-sprite-s593e34be4e.png') no-repeat;
+//}
+//
+//.icon-sprite-w-comment {
+//  background-position: 0 -12px;
+//}
+//
+//.icon-sprite-w-eye {
+//  background-position: 0 0;
+//}
+//
+//.icon-sprite-w-rate {
+//  background-position: 0 -26px;
+//}
 
 
 
