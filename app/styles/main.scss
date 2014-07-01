@@ -1110,14 +1110,16 @@ footer { text-align: center;
 }
 
 .form-register.form-enter {
-	margin-top: 72px;
+	margin-top: 58px;
+	position: relative;
+	z-index: 555555;
 	& .name {
 		border-top: 1px solid #f1ecec;
-		padding-top: 30px;
+		padding-top: 22px;
 
 	}
 }
-.social-icons { text-align: center; padding: 20px 0;}
+.social-icons { text-align: center; }
 .social-vk {
 	display: inline-block;
 	width: 46px;
@@ -1137,9 +1139,20 @@ footer { text-align: center;
 	background: url(/images/pass.png) no-repeat right 15px center;
 }
 
+.b-s-descr {
+	border-bottom: 1px solid #f1ecec;
+	margin-bottom: 15px;
+}
+
 .s-descr {
 	color: #666;
 	font-size: $exo16;
+	position: relative;
+	top: 20px;
+	width: 150px;
+	margin: auto;
+	margin-bottom: 10px;
+	background: white;
 }
 
 .s-b-icons {

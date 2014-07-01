@@ -31,9 +31,12 @@
       </ul>
 
       <form action="">
-      	<section class="reg">
-      		<a href="enter.html"><button class="enter" type="button">Вход</button></a>
-      		<button class="register" type="button">Регистрация</button>
+      	<a href="enter.html">
+      		   <button class="enter" type="button">Вход</button>
+      		</a>
+      		<a href="register.html">
+      			<button class="register" type="button">Регистрация</button>
+      		</a>
       	</section>
       </form>
 
@@ -112,84 +115,43 @@
     <div class="container container-enter">
          <div class="row">
           <div class="col-xs-12">
+<hr>
+<section class="form-register form-enter">
+     <form action="">
+         <p class="name">
+        	<input name="name" type="text" placeholder="Ваш логин" id="name">
+      	 </p>
+      	 <p class="pass">
+        <input name="pass" type="password" placeholder="Ваш пароль" id="pass">
+      	</p>
+      	 <p class="pass">
+        <input name="pass-repeat" type="password" placeholder="Пароль еще раз" id="pass">
+      	</p>
+      	<p class="btn-enter">
+        <button class="button-green" name="btn-enter" type="submit">
+        Войти на сайт
+        </button>
+      	</p>
+      	<div class="e-and-forget">
+      		<a href="#">Забыли пароль?</a>
+      		<a href="#">Зарегистрироваться</a>
+      	</div>
+     </form>
+</section>
 
-<div id="myModal-tiny" class="reveal-modal tiny" data-reveal>
-  <h2>Tiny should be 30%</h2>
-  <p class="lead">Your couch.  It is mine.</p>
-  <p>Im a cool paragraph that lives inside of an even cooler modal. Wins</p>
-  <a class="close-reveal-modal">&#215;</a>
-</div>
-
-<div id="myModal-small" class="reveal-modal small" data-reveal>
-  <h2>Small should be 40%</h2>
-  <p class="lead">Your couch.  It is mine.</p>
-  <p>Im a cool paragraph that lives inside of an even cooler modal. Wins</p>
-  <a class="close-reveal-modal">&#215;</a>
-</div>
-
-<div id="myModal-medium" class="reveal-modal medium" data-reveal>
-  <h2>Small should be 60%</h2>
-  <p class="lead">Your couch.  It is mine.</p>
-  <p>Im a cool paragraph that lives inside of an even cooler modal. Wins</p>
-  <a class="close-reveal-modal">&#215;</a>
-</div>
-
-<div id="myModal-large" class="reveal-modal large" data-reveal>
-  <h2>Small should be 70%</h2>
-  <p class="lead">Your couch.  It is mine.</p>
-  <p>Im a cool paragraph that lives inside of an even cooler modal. Wins</p>
-  <a class="close-reveal-modal">&#215;</a>
-</div>
-
-<div id="myModal-xlarge" class="reveal-modal xlarge" data-reveal>
-  <h2>xLarge should be 95%</h2>
-  <p class="lead">Your couch.  It is mine.</p>
-  <p>Im a cool paragraph that lives inside of an even cooler modal. Wins</p>
-  <a class="close-reveal-modal">&#215;</a>
-</div>
-
-
-<div id="myModal-full" class="reveal-modal full" data-reveal>
-  <h2>Full should be 100%</h2>
-  <p class="lead">Your couch.  It is mine.</p>
-  <p>Im a cool paragraph that lives inside of an even cooler modal. Wins</p>
-  <a class="close-reveal-modal">&#215;</a>
-</div>
+<section class="social-icons">
+	<div class="b-s-descr">
+		<p class="s-descr">Через соцсети</p>
+	</div>
+	<div class="s-b-icons">
+		<a href="#" class="social-vk icon-sprite-icon-vk"></a>
+		<a href="#" class="social-vk icon-sprite-icon-fb "></a>
+		<a href="#" class="social-vk icon-sprite-icon-odin"></a>
+	</div>
+</section>
 
 
 
-<div class="row">
-  <h1>Pick a Size</h1>
-  <a href="#" class="button" data-reveal-id="myModal-tiny" data-reveal>Tiny Modal</a>
-
-  <a href="#" class="button" data-reveal-id="myModal-small" data-reveal>Small Modal</a>
-
-  <a href="#" class="button" data-reveal-id="myModal-medium" data-reveal>Medium Modal</a>
-
-  <a href="#" class="button" data-reveal-id="myModal-large" data-reveal>Large Modal</a>
-
-  <a href="#" class="button" data-reveal-id="myModal-xlarge" data-reveal>X-Large Modal</a>
-
-  <a href="#" class="button" data-reveal-id="myModal-full" data-reveal>Full Modal</a>
-</div>
-
-
-<footer>
-	<section class="footer">
-		<div>
-			<img class="logo footer" src="/images/logo-footer.png" alt="">
-		</div>
-		<section class="copyright">
-			<p>Все права защищены &copy; 2003-2014</p>
-			<p>Автомобильный журнал Колеса.ру</p>
-		</section>
-		<button type="button">Полная версия</button>
-	</section>
-
-	<section class="btn-backtop">
-		<button class="backtop" type="button">Наверх страницы</button>
-	</section>
-</footer>
 
 
 
@@ -204,15 +166,11 @@
 <script src="//cdn.jsdelivr.net/jquery/2.1.1/jquery.js"></script>
 <script src="/scripts/selectholder.js"></script>
 <script src="scripts/jquery.customSelect.min.js"></script>
-<script src="http://cdn.foundation5.zurb.com/foundation.js"></script>
 <script>
 //    $(document).ready(function(){
     $('#submenu, #mark, #model').customSelect();
 //});
     </script>
-        <script>
-			$(document).foundation();
-		</script>
 
         <!-- build:js scripts/plugins.js -->
         <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/affix.js"></script>
