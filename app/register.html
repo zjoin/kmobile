@@ -7,7 +7,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 		<link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
       <link rel="stylesheet" href="styles/main.css">
-        <script src="bower_components/modernizr/modernizr.js"></script>
+      <link rel="stylesheet" href="styles/hover.css" >
+      <script src="bower_components/modernizr/modernizr.js"></script>
 
     </head>
     <body> <!--data-scroll-reveal-->
@@ -21,21 +22,17 @@
         <li><a href="#">О проекте</a></li>
         <li class="active"><a href="#">Контакты</a></li>
         <li><a href="#">Вакансии</a></li>
-<!--
-        <li><a href="#">Тест-драйвы</a></li>
-        <li><a href="#">Гаджеты</a></li>
--->
-        <hr>
         <li><a href="#">Реклама</a></li>
         <hr>
       </ul>
 
       <form action="">
-      	<a href="enter.html">
-      		   <button class="enter" type="button">Вход</button>
+      	<section class="reg">
+      		<a href="enter.html">
+      		   <button class="enter button push" type="button">Вход</button>
       		</a>
       		<a href="register.html">
-      			<button class="register" type="button">Регистрация</button>
+      			<button class="register button push" type="button">Регистрация</button>
       		</a>
       	</section>
       </form>
@@ -64,10 +61,13 @@
 
 <section class="tmp-fixed">
     <div id="sb-search" class="sb-search " >
+    <span class="glyphicon glyphicon-search q-move"></span>
     	<form>
-        	<input class="sb-search-input " onkeyup="buttonUp();" placeholder="Поиск по сайту..." onblur="monkey();" type="search" value="" 						name="search" id="search">
+        	<input class="sb-search-input l-move" onkeyup="buttonUp();" placeholder="Поиск по сайту..." onblur="monkey();" type="search" value="" 						name="search" id="search">
+
         	<input class="sb-search-submit" type="submit"  value="">
         <span class="sb-icon-search"><span class="glyphicon glyphicon-search">				</span>
+       <img class="eee" src="/images/icon-s-close.png" alt="">
       </span>
     </form>
 </div>
@@ -128,13 +128,12 @@
         <input name="pass-repeat" type="password" placeholder="Пароль еще раз" id="pass">
       	</p>
       	<p class="btn-enter">
-        <button class="button-green" name="btn-enter" type="submit">
+        <button class="button-green push" name="btn-enter" type="submit">
         Войти на сайт
         </button>
       	</p>
-      	<div class="e-and-forget">
-      		<a href="#">Забыли пароль?</a>
-      		<a href="#">Зарегистрироваться</a>
+      	<div class="e-and-forget regist">
+      		<a href="#">Уже зарегестрированы?</a>
       	</div>
      </form>
 </section>
@@ -144,9 +143,9 @@
 		<p class="s-descr">Через соцсети</p>
 	</div>
 	<div class="s-b-icons">
-		<a href="#" class="social-vk icon-sprite-icon-vk"></a>
-		<a href="#" class="social-vk icon-sprite-icon-fb "></a>
-		<a href="#" class="social-vk icon-sprite-icon-odin"></a>
+		<a href="#" class="social-vk icon-sprite-icon-vk pop"></a>
+		<a href="#" class="social-vk icon-sprite-icon-fb pop"></a>
+		<a href="#" class="social-vk icon-sprite-icon-odin pop"></a>
 	</div>
 </section>
 
